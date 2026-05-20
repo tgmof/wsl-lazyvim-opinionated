@@ -1,4 +1,4 @@
-sudo apt-get install software-properties-common build-essential zip unzip jq -y
+sudo apt-get install software-properties-common build-essential gcc make zip unzip jq -y
 if command -v brew >/dev/null 2>&1; then
   echo "Homebrew is already in PATH; skipping install."
 else

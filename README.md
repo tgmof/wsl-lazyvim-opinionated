@@ -17,7 +17,6 @@ cd wsl-lazyvim-opinionated && ./neovim_for_wsl.sh
 cd
 rm -rf wsl-lazyvim-opinionated
 nvim
-
 ```
 
 Lean the following keybindings by heart for quick start: (note that "+" means that you end up with several keys pressed AT THE SAME TIME whereas the absence of "+" means "press, release and then continue with the next key". Ex: `<Ctrl>+c` (concurrent) is different from `<Ctrl>c` (sequential))
