@@ -24,10 +24,14 @@ Lean the following keybindings by heart for quick start: (note that "+" means th
 - Generally speaking, use `q` or `<esc>` to exit any pop-up (yes `q` not `:q`)
 - Generally speaking, combinations like `<ctrl>+<some letter>` means "move your cursor somewhere" and `<shift>+<some letter>` means "update the buffer/screen where your cursor is"
 - Generally speaking, as per the vim convention use a letter for an action and the same letter capitalized to do the contrary it (Ex: n to move to the next search pattern match and N for the previous one).
+
+Run through:
+
 - `<space>e` to open the explorer side window like in VSCode, so you can leave it on the left and navigate back and forth with `<Ctrl>+h` and `<Ctrl>+l`
 - `<space><space>` to open a full-page pop-up editor that also shows preview the files for you
 - `<enter>` to open a file (it's called a buffer, so technically you open a buffer and load the file into it)
 - Open a second and third file/buffer using the same method
+- Enter `i` to enter "insert mode" and make some edit and then `<ctrl>+s` to exit insert mode and save, like in VSCode
 - Close a buffer/file via `<space>bd` (stands for buffer delete)
 - Use `<shift>h` `<shift>l` to move between the buffers (which looks like moving between VSCode Tabs at the top of your screen)
 - Use `<space>ft` to open a split that shows your terminal like in VScode, escape the "terminal mode" (similar to "insert mode" for files) via `<esc><esc>` and navigate back and forth between terminal and editor via `<Ctrl>+j` and `<Ctrl>+k`, then when your cursor is on the "terminal buffer" press `<space>bd` to close the terminal
