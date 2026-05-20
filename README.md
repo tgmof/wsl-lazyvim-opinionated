@@ -1,6 +1,6 @@
 # wsl-lazyvim-opinionated
 
-An opinionated setup for neovim/lazyvim beginner that come from VSCode and wants to avoid figuring things out and be able to start using neovim/lazyvim "quickly" and "learn by doing" the details on the way.
+An opinionated setup for neovim/lazyvim noob that come from VSCode and wants to avoid figuring things out and be able to start using neovim/lazyvim "quickly" and "learn by doing" the details on the way.
 
 It was successfully tested in Windows 11 with the default wsl (wsl --install) which installs Ubuntu 24.04LTS and names the wsl instance "Ubuntu".
 
@@ -14,7 +14,9 @@ Open a WSL terminal and run:
 cd
 git clone https://github.com/tgmof/wsl-lazyvim-opinionated.git
 cd wsl-lazyvim-opinionated && ./neovim_for_wsl.sh
+cd
 rm -rf wsl-lazyvim-opinionated
+nvim
 
 ```
 
