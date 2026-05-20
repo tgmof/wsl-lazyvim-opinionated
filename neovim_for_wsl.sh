@@ -31,9 +31,20 @@ if command -v powershell.exe >/dev/null 2>&1; then
     foreach ($fontFile in $fontFiles) {
       $source = Join-Path $fontSourceDir $fontFile
       $target = Join-Path $fontInstallDir $fontFile
-      Copy-Item -Path $source -Destination $target -Force
-      $fontName = "$([System.IO.Path]::GetFileNameWithoutExtension($fontFile)) (TrueType)"
-      New-ItemProperty -Path $fontRegistryPath -Name $fontName -Value $target -PropertyType String -Force | Out-Null
+      if (Test-Path $source) {
+        Copy-Item -Path $source -Destination $target -Force
+        $fontName = "$([System.IO.Path]::GetFileNameWithoutExtension($fontFile)) (TrueType)"
+        New-ItemProperty -Path $fontRegistryPath -Name $fontName -Value $fontFile -PropertyType String -Force | Out-Null
+      }
+    }
+
+    $shell = New-Object -ComObject Shell.Application
+    $fontFolder = $shell.Namespace(0x14) # 0x14 represents the Fonts special folder
+    foreach ($fontFile in $fontFiles) {
+      $target = Join-Path $fontInstallDir $fontFile
+      if (Test-Path $target) {
+        $fontFolder.CopyHere($target, 0x10) # 0x10 avoids displaying a progress dialog
+      }
     }
   '
   appdata_path="$(wslpath "$(powershell.exe -Command "echo \$env:AppData" | tr -d '\r')")"
