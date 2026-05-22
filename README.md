@@ -6,6 +6,9 @@ It was successfully tested in Windows 11 with the default wsl (wsl --install) wh
 
 The installation bash file installs Alacritty in Windows. This is less fancy than (for instance) WezTerm but this is on purpose: WezTerm would add yet another layer of complexity for neovim/lazyvim beginners and yet another set of keyboard shortcut to understand / learn, and Alacritty has the additional advantage of using GPU acceleration a lot and having a very low RAM footprint (order of 30MB against 300MB for WezTerm).
 
+The color mode (dark/light) follows Windows color mode (Windows > Settings > Personalization > Colors > "Choose your mode" > dark or light).
+If you just changed windows color mode, restart neovim to see the new color mode being applied.
+
 ## Installation guide
 
 Open a WSL terminal and run:
