@@ -14,11 +14,12 @@ end
 
 -- 2. Return the dynamic configuration to LazyVim
 return {
+  { "projekt0n/github-nvim-theme", name = "github-theme" },
   {
     "LazyVim/LazyVim",
     opts = {
       -- Compute the colorscheme name dynamically based on Windows
-      colorscheme = is_dark and "tokyonight-moon" or "tokyonight-day",
+      colorscheme = is_dark and "github_dark_high_contrast" or "github_light_high_contrast",
     },
   },
 }
