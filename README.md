@@ -16,9 +16,9 @@ Open a WSL terminal and run:
 ```bash
 cd
 git clone https://github.com/tgmof/wsl-lazyvim-opinionated.git
-cd wsl-lazyvim-opinionated && ./neovim_for_wsl.sh
+cd wsl-lazyvim-opinionated && ./neovim_for_wsl.sh # sh script is idempotent, so you can run it twice if needed
 cd
-rm -rf wsl-lazyvim-opinionated
+# rm -rf wsl-lazyvim-opinionated # this also deletes your neovim config backup...
 nvim
 ```
 
@@ -38,7 +38,7 @@ Run through:
 - Enter `i` to enter "insert mode" and make some edit and then `<ctrl>+s` to exit insert mode and save, like in VSCode
 - Close a buffer/file via `<space>bd` (stands for buffer delete)
 - Use `<shift>h` `<shift>l` to move between the buffers (which looks like moving between VSCode Tabs at the top of your screen)
-- Use `<space>ft` to open a split that shows your terminal like in VScode, escape the "terminal mode" (similar to "insert mode" for files) via `<esc><esc>` and navigate back and forth between terminal and editor via `<Ctrl>+j` and `<Ctrl>+k`, then when your cursor is on the "terminal buffer" press `<space>bd` to close the terminal
+- Use `<space>ft` to open a split that shows your terminal like in VScode, escape the "terminal mode" (similar to "insert mode" for files) via `<esc>` and navigate back and forth between terminal and editor via `<Ctrl>+j` and `<Ctrl>+k`, then when your cursor is on the "terminal buffer" press `<space>bd` to close the terminal
 - If you want a dedicated "buffer terminal" (like a VSCode Tab Terminal), press `<space>fn` followed by `:terminal`
 - You can see the modified files in the `<space>e` editor or via the git interface that you can open via `<space>gd` (git diff) `<space>gg` (full git UI, navigate with `<tab>` between panes, scroll down/up a diff with `<shift>j` and `<shift>k` and read the commands at the bottom to stage/stash/commit,...
 - Missing language support / linting can be easily added via `:Mason` (and follow the instructions/keybindings documented in that UI to search/install what you need)

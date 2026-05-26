@@ -1,0 +1,14 @@
+{
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://vim-adventures.com/*"
+    }
+  ],
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap H\nunmap J\nunmap K\nunmap L\nmap H previousTab\nmap L nextTab\nmap B goBack\nmap N goForward",
+  "settingsVersion": "2.4.2"
+}
