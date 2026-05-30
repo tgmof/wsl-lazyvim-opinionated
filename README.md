@@ -3,6 +3,7 @@
 An opinionated setup for neovim/lazyvim noob that come from VSCode and wants to avoid figuring things out and be able to start using neovim/lazyvim "quickly" and "learn by doing" the details on the way.
 
 It was successfully tested in Windows 11 with the default wsl (wsl --install) which installs Ubuntu 24.04LTS and names the wsl instance "Ubuntu".
+For the macOS setup, see <https://github.com/tgmof/macOS-lazyvim-opinionated>
 
 The installation bash file installs Alacritty in Windows. This is less fancy than (for instance) WezTerm but this is on purpose: WezTerm would add yet another layer of complexity for neovim/lazyvim beginners and yet another set of keyboard shortcut to understand / learn, and Alacritty has the additional advantage of using GPU acceleration a lot and having a very low RAM footprint (order of 30MB against 300MB for WezTerm).
 
