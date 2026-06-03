@@ -11,7 +11,7 @@ return {
         vim.cmd.stopinsert()
       end,
       hidden = true,
-
+      ignored = true,
       -- Configure the custom keymap for the explorer source
       sources = {
         explorer = {
