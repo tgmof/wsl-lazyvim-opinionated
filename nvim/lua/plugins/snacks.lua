@@ -2,6 +2,15 @@ return {
   "folke/snacks.nvim",
 
   opts = {
+    -- Terminal/styles are meant to make border visible
+    terminal = {
+      win = { border = "single" },
+    },
+    styles = {
+      notification = { border = "single" },
+      input = { border = "single" },
+      select = { border = "single" },
+    },
     picker = {
       -- Forces Neovim out of insert mode the moment ANY picker opens
       -- The idea here is that all "pop-up" behave the same: Explorer, File navigator, string
