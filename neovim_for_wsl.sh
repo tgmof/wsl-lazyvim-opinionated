@@ -90,14 +90,11 @@ else
   printf "Your /etc/wsl.conf already contains an [interop] section so we didn't update it. If this file doesn't contain this: \n[interop]\nenabled=true\nappendWindowsPath=true\n Please update it manually to allow windows program to run like win32yank or powershell"
 fi
 
-echo "When you feel ready, add in your ~/.bashrc the following lines so that neovim becomes your default editor:"
 cat <<EOF
-if [ -n "$NVIM" ]; then
-    # This avoid vim in vim while doing <C-x><C-e> to edit a long command
-    export VISUAL="nvim --server $NVIM --remote-ui"
-    export EDITOR="nvim --server $NVIM --remote-ui"
-else
-    export VISUAL="nvim"
-    export EDITOR="nvim"
-fi
+When you feel ready, add:
+export EDITOR='nvim'
+export VISUAL="nvim --cmd 'let g:flatten_wait=1'"
+in your ~/.bashrc so that neovim becomes your default editor (the VISUAL trick is
+meant specifically to be able to <C-x><C-e> in a neovim terminal so that it opens a temporary 
+buffer to edit your command but avoid the 'vim in vim' issue.
 EOF
