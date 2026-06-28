@@ -4,6 +4,18 @@
 
 -- Sync yank/paste with the windows clipboard automatically
 vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+  name = "win32yank-wsl",
+  copy = {
+    ["+"] = "win32yank.exe -i --crlf",
+    ["*"] = "win32yank.exe -i --crlf",
+  },
+  paste = {
+    ["+"] = "win32yank.exe -o --lf",
+    ["*"] = "win32yank.exe -o --lf",
+  },
+  cache_enabled = 0,
+}
 
 -- Automatically enter the last session while someone enters 'nvim' without arg in a given folder
 vim.api.nvim_create_autocmd("VimEnter", {

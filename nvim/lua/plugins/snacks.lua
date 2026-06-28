@@ -19,11 +19,11 @@ return {
       on_show = function()
         vim.cmd.stopinsert()
       end,
-      hidden = true,
-      ignored = true,
       -- Configure the custom keymap for the explorer source
       sources = {
         explorer = {
+          hidden = true,
+          ignored = true,
           win = {
             list = {
               keys = {
