@@ -50,6 +50,10 @@ if command -v powershell.exe >/dev/null 2>&1; then
   appdata_path="$(wslpath "$(powershell.exe -Command "echo \$env:AppData" | tr -d '\r')")"
   mkdir -p "$appdata_path/alacritty"
   cp alacritty.toml "$appdata_path/alacritty/alacritty.toml"
+  programdata_path="$(wslpath "$(powershell.exe -Command "echo \$env:ProgramData" | tr -d '\r')")"
+  mkdir -p "$programdata_path/Neovim"
+  cp WSLNeovim.exe "$programdata_path/Neovim/"
+  cp -r build_exe/ "$programdata_path/Neovim/"
 else
   echo "powershell.exe is not available in PATH; skipping Windows Alacritty and win32yank setup."
 fi
