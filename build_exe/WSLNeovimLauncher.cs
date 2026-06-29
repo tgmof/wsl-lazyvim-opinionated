@@ -16,7 +16,7 @@ public class WSLNeovimLauncher {
             // 2. Run Alacritty!
             ProcessStartInfo alacrittyInfo = new ProcessStartInfo {
                 FileName = @"C:\Program Files\Alacritty\alacritty.exe",
-                Arguments = string.Format("-e bash /mnt/c/ProgramData/Neovim/launch_nvim.sh '{0}'", targetFile.Replace("\\", "/")),
+                Arguments = string.Format("-e wsl bash /mnt/c/ProgramData/Neovim/launch_nvim.sh '{0}'", targetFile.Replace("\\", "/")),
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
