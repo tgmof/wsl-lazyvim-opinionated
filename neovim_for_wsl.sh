@@ -53,6 +53,7 @@ if command -v powershell.exe >/dev/null 2>&1; then
   programdata_path="$(wslpath "$(powershell.exe -Command "echo \$env:ProgramData" | tr -d '\r')")"
   mkdir -p "$programdata_path/Neovim"
   cp WSLNeovim.exe "$programdata_path/Neovim/"
+  cp launch_nvim.sh "$programdata_path/Neovim/"
   cp -r build_exe/ "$programdata_path/Neovim/"
 else
   echo "powershell.exe is not available in PATH; skipping Windows Alacritty and win32yank setup."
