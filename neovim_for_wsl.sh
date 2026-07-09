@@ -4,6 +4,7 @@ if command -v brew >/dev/null 2>&1; then
 else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   printf '\neval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >>~/.bashrc
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 fi
 # Install tools required by basic LazyVim setup
 brew install fd
