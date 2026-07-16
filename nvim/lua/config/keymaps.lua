@@ -20,3 +20,7 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { silent = true })
 vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", { silent = true })
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", { silent = true })
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", { silent = true })
+
+-- Map Ctrl+Z to Undo
+vim.keymap.set("n", "<C-z>", "u", { desc = "Undo" })
+vim.keymap.set("i", "<C-z>", "<C-o>u", { desc = "Undo" })
